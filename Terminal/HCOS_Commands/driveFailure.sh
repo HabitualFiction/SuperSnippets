@@ -1,5 +1,4 @@
 ###Condition Show
-
 #Shows all currently set conditions
 sc condition show display set
 
@@ -9,7 +8,6 @@ sc condition show
 
 
 ###Drive & Node Data
-
 #Show drive condition and information
 sc drive show
 
@@ -21,12 +19,13 @@ smartctl /dev/sd<enumerator of the drive>
 
 
 ###Logs
-
 #Messages
 less /var/log/Messages
 
 #scaled
 less /var/scale/scaled.log
 
-
+###Raid Array
+#Check on the status of the array, useful when receiving "incomplete" or "Recovering" conditions
+watch cat /proc/mdstat
 

@@ -11,3 +11,10 @@ sqlite3 /fsscale0/lib/cluster_stor.db "update users set password= 'scale' where 
 
 #4.2+
 sc update user name <username> password <password>
+
+##HyperCore:
+#To see the UI username and password, type the command:
+sc configdata show type scaled::User
+
+#To reset the password, type the command:
+sc user update name <username> password <password>

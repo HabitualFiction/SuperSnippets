@@ -1,0 +1,35 @@
+#Generic Drive Failure 
+Hi, 
+
+Please open a support tunnel on # . I'll be able to log into your cluster, recover data on the failed drive and determine if it needs to be replaced. Please also confirm the following shipping address: 
+
+Hi, 
+
+You should have received the new drive and a shipping label to return the old drive. Let me know if you need anything else I'd be glad to help, otherwise thanks very much for your time!
+
+
+#Generic Quiesce Failure
+
+Hi , 
+
+This alert is the Scale Tools Guest Agent letting you know that the snapshot taken at the time of that alert is a crash-consistent and not app-consistent snapshot. For most applications the difference is meaningless. If you do not need the snapshots of that VM to be app-consistent you can remove the Scale Tools Guest Agent. 
+
+If you need to be app-consistent on this VM or otherwise are interested in troubleshooting the issue, there are quite a few places to start. I'll include links at the bottom of this email to detailed troubleshooting guides. You should look into the Event Viewer at the same time as the timestamped alerts and see if you find any events with the VSS as source. You can have a quiesce failure if any backup programs are accessing VSS at the same time as your snapshots so ensure no guest-level backup schedules are overlapping with your VM snapshot schedule. Quiesce will also ALWAYS fail if the VM is booting or powering down at the time of the snapshot as well. 
+
+Here's a link to our official landing page for this alert: 
+http://info.scalecomputing.com/l/46782/2018-04-24/5g95bh
+
+Here's a link to a detailed forum post that includes some more very specific root causes: 
+https://scalelegion.community/discussion/111/hc3-alerts-vm-snapshot-quiesce-failure#latest
+
+Good luck and let me know if you need any other information!
+​
+
+#Generic "VM Disk Space Gauge" Question
+
+What you're seeing is an element of thin-provisioning. Instead of allocating a full chunk of let's say 100GB when you create the VM, HC3 provides physical storage to your VMs as they need it from the pool of disk storage available to it. Individual VM gauges do not lower in % because the Guest OS's do not yet have a method to report to HC3 when disk space allocated to the VM is no longer truly being used by the VM. In this sense, the VM gauge is not a living representation of usage but a gauge of allocation over time. 
+
+Just a few sentences can't quite cover how HC3 handles storing and allocating your data. There is quite a lot of information about this on our official page concerning thin-provisioning if you'd like to give it a quick read. Let me know if you have any other questions about this. 
+
+Follow this link for in-depth Thin-Provisioning on HC3 rundown. 
+http://info.scalecomputing.com/l/46782/2018-07-16/5s67qb

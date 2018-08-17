@@ -1,0 +1,2 @@
+#Enable non-HP SFP Tranceivers. All non-HP are blocked by default on HP Aruba switches
+allow-unsupported-tranceiver

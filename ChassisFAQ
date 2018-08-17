@@ -1,0 +1,13 @@
+Question
+I saw a red blinking LED from “ i ” icon on the front panel control. What does it stand for and what does it mean?
+Answer
+The “ i ” means system information and it can be either RED or BLUE LED. 
+
+Solid Red : Overheat 
+Blink Red (quick) : Fan fail 
+Blink Red (slow) : Power fail 
+Solid Blue : Local UID 
+Blink Blue (quick): Remote UID 
+
+
+Based on your server with red LED blinking, you might have either Fan or power failure.

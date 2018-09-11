@@ -20,6 +20,9 @@ smartctl /dev/sd<enumerator of the drive>
 #Serial and Asset of the node
 dmidecode -t 1,3 | egrep " 00|Serial"
 
+#CPu Speed
+cat /proc/cpuinfo | egrep -m 1 "model name"
+
 
 ###Logs
 #Messages

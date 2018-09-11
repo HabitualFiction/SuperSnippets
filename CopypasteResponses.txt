@@ -1,11 +1,13 @@
 #Generic Drive Failure 
 Hi, 
 
-Please open a support tunnel on # . I'll be able to log into your cluster, recover data on the failed drive and determine if it needs to be replaced. Please also confirm the following shipping address: 
+Please open a support tunnel on code # . I'll be able to log into your cluster, recover information on the failed drive and determine if it needs to be replaced. Please also confirm the following shipping address: 
 
 Hi, 
 
 You should have received the new drive and a shipping label to return the old drive. Let me know if you need anything else I'd be glad to help, otherwise thanks very much for your time!
+
+#Received New Drive
 
 
 #Generic Quiesce Failure
@@ -22,7 +24,7 @@ http://info.scalecomputing.com/l/46782/2018-04-24/5g95bh
 Here's a link to a detailed forum post that includes some more very specific root causes: 
 https://scalelegion.community/discussion/111/hc3-alerts-vm-snapshot-quiesce-failure#latest
 
-Good luck and let me know if you need any other information!
+Thanks very much for your time and let me know if you need any other information!
 ​
 
 #Generic "VM Disk Space Gauge" Question
